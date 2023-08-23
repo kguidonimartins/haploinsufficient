@@ -81,17 +81,17 @@
         // QWERTY
 		qwert_layer {
 			bindings = <
-                   &mt TAB Q    &kp W         &kp E         &kp R              &kp T              &kp Y               &kp U            &kp I                 &kp O         &kp P
-                   &kp A        &kp S         &kp D         &kp F              &kp G              &kp H               &kp J            &kp K                 &kp L         &kp SEMI
-                   &mt LSHFT Z  &kp X         &kp C         &kp V              &kp B              &kp N               &kp M            &kp COMMA             &kp DOT       &mt RSHFT QMARK
-				 /*&            &*/              &kp LCTRL       &kp LALT      &base_lt SYM_L BSPC    &base_lt NUM_L SPACE     &kp RCMD       &base_lt NAV_L RET     /*  &             &*/
+                   &kp Q        &kp W         &kp E         &kp R              &kp T              &kp Y               &kp U            &kp I                 &kp O         &kp P
+                   &mt LGUI A   &mt LALT S    &mt LSHFT D   &mt LCTRL F        &kp G              &kp H               &mt RCTRL J      &mt RSHFT K           &kp RALT L    &kp SEMI
+                   &kp Z        &kp X         &kp C         &kp V              &kp B              &kp N               &kp M            &kp COMMA             &kp DOT       &mt RGUI SLASH
+	      /*&            &*/              &kp LALT ESC  &kp LCMD TAB   &base_lt SYM_L BSPC    &base_lt NUM_L SPACE &kp RCMD         &base_lt NAV_L RET     /*  &             &*/
 			>;
 		};
 
 		num_layer {
 			bindings = <
                    &kp N1       &kp N2        &kp N3        &kp N4             &kp N5             &kp N6              &kp N7           &kp N8                   &kp N9        &kp N0
-                   &kp STAR     &kp PLUS      &kp MINUS     &none              &none              &kp PLUS            &kp MINUS        &kp EQUAL                &none         &none 
+                   &kp STAR     &kp PLUS      &kp MINUS     &none              &none              &kp PLUS            &kp MINUS        &kp EQUAL                &none         &none
                    &none        &none         &none         &none              &none              &none               &none            &kp COMMA                &kp BSLH      &kp FSLH
 				 /*&            &*/         &trans             &trans             &trans              &trans           &trans                   &trans     /*             &             &*/
 			>;
