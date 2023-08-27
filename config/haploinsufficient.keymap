@@ -21,7 +21,8 @@
 #define NUM_L   1
 #define SYM_L   2
 #define NAV_L   3
-//#define FUN_L   4
+#define OUT_L   4
+#define FUN_L   4
 
 #define MY_COPY LC(INSERT)
 #define MY_PASTE LS(INSERT)
@@ -84,14 +85,14 @@
                    &mt TAB Q    &kp W         &kp E         &kp R              &kp T              &kp Y               &kp U            &kp I                 &kp O         &kp P
                    &mt LGUI A   &mt LALT  S   &mt LSHFT D   &mt LCTRL F        &kp G              &kp H               &mt RCTRL J      &mt RSHFT K           &mt RALT L    &kp SEMI
                    &mt LSHFT Z  &kp X         &kp C         &kp V              &kp B              &kp N               &kp M            &kp COMMA             &kp DOT       &mt RGUI SLASH
-				 /*&            &*/              &mt LALT ESC   &mt LCMD TAB  &base_lt SYM_L RET     &base_lt NUM_L SPACE     &kp BSPC       &base_lt NAV_L RET     /*  &             &*/
+				 /*&            &*/              &mt LALT ESC   &mt LCMD TAB  &base_lt OUT_L RET     &base_lt SYM_L SPACE  &base_lt NUM_L BSPC       &base_lt FUN_L RCMD     /*  &             &*/
 			>;
 		};
 
 		num_layer {
 			bindings = <
                    &kp LBKT     &kp N7        &kp N8        &kp N9             &kp RBKT           &none               &none            &none                 &none         &none
-                   &kp LPAR     &kp N4        &kp N5        &kp N6             &kp RPAR           &none               &none            &none                 &none         &none 
+                   &kp LPAR     &kp N4        &kp N5        &kp N6             &kp RPAR           &none               &kp RCTRL        &kp RSHFT             &kp RALT      &kp RCMD
                    &kp LBRC     &kp N1        &kp N2        &kp N3             &kp RBRC           &none               &none            &none                 &none         &none
 				 /*&            &*/         &trans             &kp N0             &trans              &trans           &trans                &trans     /*             &             &*/
 			>;
@@ -108,10 +109,28 @@
 
 		nav_layer {
 			bindings = <
-                   &none        &kp UP        &none         &none              &none             &bt BT_SEL 0        &bt BT_SEL 1     &bt BT_SEL 2             &bt BT_SEL 3  &bt BT_SEL 4
-                   &kp LEFT     &kp DOWN      &kp RIGHT     &none              &none             &none               &none            &none                    &none         &none 
-                   &bt BT_CLR   &none         &none         &kp C_VOL_UP       &kp C_VOL_DN      &none               &none            &none                    &none         &none 
-				 /*&            &*/         &caps_word         &trans            &mt BSPC BSPC    &bt BT_PRV       &bt BT_NXT               &trans     /*            &             &*/
+                   &none        &none         &none         &none              &none             &caps_word          &none            &none                    &none         &none
+                   &none        &none         &none         &none              &none             &kp LEFT            &kp DOWN         &kp UP                   &kp RIGHT     &kp DQT
+                   &none        &none         &none         &none              &none             &none               &none            &none                    &none         &kp SQT
+				 /*&            &*/         &none              &none             &none               &none            &none                    &none     /*            &             &*/
+			>;
+		};
+
+		outro_layer {
+			bindings = <
+                   &none        &none         &none         &none              &none             &caps_word          &none            &none                    &none         &none
+                   &none        &none         &none         &none              &none             &kp LEFT            &kp DOWN         &kp UP                   &kp RIGHT     &kp DQT
+                   &none        &none         &none         &none              &none             &none               &none            &none                    &none         &kp SQT
+				 /*&            &*/         &none              &none             &none               &none            &none                    &none     /*            &             &*/
+			>;
+		};
+
+		fun_layer {
+			bindings = <
+                   &none        &none         &none         &none              &none             &caps_word          &none            &none                    &none         &none
+                   &none        &none         &none         &none              &none             &kp LEFT            &kp DOWN         &kp UP                   &kp RIGHT     &kp DQT
+                   &none        &none         &none         &none              &none             &none               &none            &none                    &none         &kp SQT
+				 /*&            &*/         &none              &none             &none               &none            &none                    &none     /*            &             &*/
 			>;
 		};
 	};
