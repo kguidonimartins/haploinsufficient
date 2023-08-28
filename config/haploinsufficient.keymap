@@ -30,6 +30,11 @@
 //#define VI_W LC(RIGHT)
 //#define VI_B LC(LEFT)
 
+&lt {
+    tapping-term-ms = <TAPPING_TERM>;
+    flavor = "balanced";
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -63,17 +68,15 @@
     };
 
     behaviors {
-        base_lt: base_layer_hold_tap {
+        bhm: balanced_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "BASE_LAYER_HOLD_TAP";
+            label = "HOMEROW_MODS";
             #binding-cells = <2>;
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            quick-tap-ms = <0>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <75>;
-            global-quick-tap;
-            bindings = <&mo>, <&kp>, <&kp>, <&mt>, <&mt>;
+            bindings = <&kp>, <&kp>;
         };
-
     };
 
 	keymap {
@@ -83,9 +86,9 @@
 		qwert_layer {
 			bindings = <
                    &kp     Q    &kp W         &kp E         &kp R              &kp T              &kp Y               &kp U            &kp I                 &kp O         &kp P
-                   &mt LGUI A   &mt LALT  S   &mt LSHFT D   &mt LCTRL F        &kp G              &kp H               &mt RCTRL J      &mt RSHFT K           &mt RALT L    &kp SEMI
-                   &mt LSHFT Z  &kp X         &kp C         &kp V              &kp B              &kp N               &kp M            &kp COMMA             &kp DOT       &mt RGUI SLASH
-				 /*&            &*/              &mt LALT ESC   &mt LCMD TAB  &base_lt OUT_L RET     &base_lt SYM_L SPACE  &base_lt NUM_L BSPC       &base_lt FUN_L RCMD     /*  &             &*/
+                   &bhm LGUI A   &bhm LALT  S   &bhm LSHFT D   &bhm LCTRL F        &kp G              &kp H               &bhm RCTRL J      &bhm RSHFT K           &bhm RALT L    &kp SEMI
+                   &bhm LSHFT Z  &kp X         &kp C         &kp V              &kp B              &kp N               &kp M            &kp COMMA             &kp DOT       &bhm RGUI SLASH
+				 /*&            &*/              &mt LALT ESC   &mt LCMD TAB  &lt OUT_L RET     &lt SYM_L SPACE  &lt NUM_L BSPC       &lt FUN_L RCMD     /*  &             &*/
 			>;
 		};
 
