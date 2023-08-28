@@ -42,6 +42,20 @@
 //#define VI_W LC(RIGHT)
 //#define VI_B LC(LEFT)
 
+#define ORION LCTL(LGUI(KC_A)) // launch browser
+#define EMACS LCTL(LGUI(KC_E)) // launch emacs
+#define WHATS LCTL(LGUI(KC_Z)) // launch whatsapp
+#define TERMM LCTL(LGUI(KC_T)) // launch native terminal
+#define ITERM LCTL(LGUI(KC_ENT)) // launch native iterm2
+#define MAIL LCTL(LGUI(KC_X)) // launch mail client
+#define CALEN LCTL(LGUI(KC_V)) // launch calendar client
+#define CLOSE LGUI(KC_Q) // close app
+
+#define MAXWA LCTL(LGUI(KC_M)) // maximize window app
+#define ALMAX LCTL(LGUI(KC_N)) // almost maximize window app
+#define FULLW LCTL(LGUI(KC_F)) // fullscreen window
+#define CLIPB LCTL(LGUI(KC_C)) // show clipboard history
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -137,10 +151,10 @@
 
 		fun_layer {
 			bindings = <
-                   &none        &none         &none         &none              &none             &caps_word          &none            &none                    &none         &none
-                   &none        &none         &none         &none              &none             &kp LEFT            &kp DOWN         &kp UP                   &kp RIGHT     &kp DQT
-                   &none        &none         &none         &none              &none             &none               &none            &none                    &none         &kp SQT
-				 /*&            &*/         &none              &none             &none               &none            &none                    &none     /*            &             &*/
+                   &CLOSE       &none         &EMACS        &none              &TERMM            &caps_word          &none            &none                    &none         &none
+                   &ORION       &none         &FINDER       &FULLW             &MAXWA            &kp LEFT            &kp DOWN         &kp UP                   &kp RIGHT     &kp DQT
+                   &WHATS       &MAIL         &CLIPB        &CALEN             &ALMAX            &none               &none            &none                    &none         &kp SQT
+				 /*&            &*/         &none              &none             &ITERM              &none            &none                    &none     /*            &             &*/
 			>;
 		};
 	};
