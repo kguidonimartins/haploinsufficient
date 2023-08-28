@@ -42,19 +42,19 @@
 //#define VI_W LC(RIGHT)
 //#define VI_B LC(LEFT)
 
-#define ORION LCTL(LGUI(A)) // launch browser
-#define EMACS LCTL(LGUI(E)) // launch emacs
-#define WHATS LCTL(LGUI(Z)) // launch whatsapp
-#define TERMM LCTL(LGUI(T)) // launch native terminal
-#define ITERM LCTL(LGUI(ENT)) // launch native iterm2
-#define MAIL LCTL(LGUI(X)) // launch mail client
-#define CALEN LCTL(LGUI(V)) // launch calendar client
-#define CLOSE LGUI(Q) // close app
+#define ORION LC(LG(A)) // launch browser
+#define EMACS LC(LG(E)) // launch emacs
+#define WHATS LC(LG(Z)) // launch whatsapp
+#define TERMM LC(LG(T)) // launch native terminal
+#define ITERM LC(LG(ENT)) // launch native iterm2
+#define MAIL LC(LG(X)) // launch mail client
+#define CALEN LC(LG(V)) // launch calendar client
+#define CLOSE LG(Q) // close app
 
-#define MAXWA LCTL(LGUI(KC_M)) // maximize window app
-#define ALMAX LCTL(LGUI(KC_N)) // almost maximize window app
-#define FULLW LCTL(LGUI(KC_F)) // fullscreen window
-#define CLIPB LCTL(LGUI(KC_C)) // show clipboard history
+#define MAXWA LC(LG(KC_M)) // maximize window app
+#define ALMAX LC(LG(KC_N)) // almost maximize window app
+#define FULLW LC(LG(KC_F)) // fullscreen window
+#define CLIPB LC(LG(KC_C)) // show clipboard history
 
 / {
     combos {
