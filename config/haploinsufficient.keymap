@@ -42,14 +42,14 @@
 //#define VI_W LC(RIGHT)
 //#define VI_B LC(LEFT)
 
-#define ORION LCTL(LGUI(KC_A)) // launch browser
-#define EMACS LCTL(LGUI(KC_E)) // launch emacs
-#define WHATS LCTL(LGUI(KC_Z)) // launch whatsapp
-#define TERMM LCTL(LGUI(KC_T)) // launch native terminal
-#define ITERM LCTL(LGUI(KC_ENT)) // launch native iterm2
-#define MAIL LCTL(LGUI(KC_X)) // launch mail client
-#define CALEN LCTL(LGUI(KC_V)) // launch calendar client
-#define CLOSE LGUI(KC_Q) // close app
+#define ORION LCTL(LGUI(A)) // launch browser
+#define EMACS LCTL(LGUI(E)) // launch emacs
+#define WHATS LCTL(LGUI(Z)) // launch whatsapp
+#define TERMM LCTL(LGUI(T)) // launch native terminal
+#define ITERM LCTL(LGUI(ENT)) // launch native iterm2
+#define MAIL LCTL(LGUI(X)) // launch mail client
+#define CALEN LCTL(LGUI(V)) // launch calendar client
+#define CLOSE LGUI(Q) // close app
 
 #define MAXWA LCTL(LGUI(KC_M)) // maximize window app
 #define ALMAX LCTL(LGUI(KC_N)) // almost maximize window app
@@ -151,10 +151,10 @@
 
 		fun_layer {
 			bindings = <
-                   &CLOSE       &none         &EMACS        &none              &TERMM            &caps_word          &none            &none                    &none         &none
-                   &ORION       &none         &FINDER       &FULLW             &MAXWA            &kp LEFT            &kp DOWN         &kp UP                   &kp RIGHT     &kp DQT
-                   &WHATS       &MAIL         &CLIPB        &CALEN             &ALMAX            &none               &none            &none                    &none         &kp SQT
-				 /*&            &*/         &none              &none             &ITERM              &none            &none                    &none     /*            &             &*/
+                   &kp CLOSE       &none         &kp EMACS        &none              &kp TERMM            &caps_word          &none            &none                    &none         &none
+                   &kp ORION       &none         &kp FINDER       &kp FULLW             &kp MAXWA            &kp LEFT            &kp DOWN         &kp UP                   &kp RIGHT     &kp DQT
+                   &kp WHATS       &kp MAIL         &kp CLIPB        &kp CALEN             &kp ALMAX            &none               &none            &none                    &none         &kp SQT
+				 /*&            &*/         &none              &none             &kp ITERM              &none            &none                    &none     /*            &             &*/
 			>;
 		};
 	};
