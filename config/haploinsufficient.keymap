@@ -30,11 +30,6 @@
 //#define VI_W LC(RIGHT)
 //#define VI_B LC(LEFT)
 
-&lt {
-    tapping-term-ms = <TAPPING_TERM>;
-    flavor = "balanced";
-};
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -88,7 +83,7 @@
                    &kp     Q    &kp W         &kp E         &kp R              &kp T              &kp Y               &kp U            &kp I                 &kp O         &kp P
                    &bhm LGUI A   &bhm LALT  S   &bhm LSHFT D   &bhm LCTRL F        &kp G              &kp H               &bhm RCTRL J      &bhm RSHFT K           &bhm RALT L    &kp SEMI
                    &bhm LSHFT Z  &kp X         &kp C         &kp V              &kp B              &kp N               &kp M            &kp COMMA             &kp DOT       &bhm RGUI SLASH
-				 /*&            &*/              &mt LALT ESC   &mt LCMD TAB  &lt OUT_L RET     &lt SYM_L SPACE  &lt NUM_L BSPC       &lt FUN_L RCMD     /*  &             &*/
+				 /*&            &*/              &bhm LALT ESC   &bhm LCMD TAB  &bhm OUT_L RET     &bhm SYM_L SPACE  &bhm NUM_L BSPC       &bhm FUN_L RCMD     /*  &             &*/
 			>;
 		};
 
