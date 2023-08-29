@@ -74,6 +74,20 @@
         //COMBO(reset_right, &bootloader, 6 7 8 9, 100)
     };
 
+    macros {
+        tmux_list: tmux_list {
+            label = "tmux_list";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &kp N0>
+                ;
+        };
+    };
+
     behaviors {
         bhm: balanced_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -121,7 +135,7 @@
 			bindings = <
                    &none        &none         &none         &none              &none             &caps_word          &none            &none                    &kp TILDE     &kp GRAVE
                    &none        &none         &none         &none              &none             &kp LEFT            &kp DOWN         &kp UP                   &kp RIGHT     &kp DQT
-                   &none        &none         &none         &none              &none             &none               &none            &none                    &none         &kp SQT
+                   &none        &none         &none         &none              &none             &tmux_list          &none            &none                    &none         &kp SQT
 				 /*&            &*/         &none              &none             &none               &none            &none                    &none     /*            &             &*/
 			>;
 		};
