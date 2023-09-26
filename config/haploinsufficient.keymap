@@ -133,10 +133,10 @@
 
 		nav_layer {
 			bindings = <
-                   &none        &none         &none         &none              &none             &caps_word          &none            &none                    &kp TILDE     &kp GRAVE
+                   &none        &none         &none         &none              &none             &caps_word          &none            &kp CARET                &kp TILDE     &kp GRAVE
                    &none        &none         &none         &none              &none             &kp LEFT            &kp DOWN         &kp UP                   &kp RIGHT     &kp DQT
                    &none        &none         &none         &none              &none             &tmux_list          &none            &none                    &none         &kp SQT
-				 /*&            &*/         &none              &none             &none               &none            &none                    &none     /*            &             &*/
+				 /*&            &*/         &none              &none             &none               &none            &kp DEL                    &none     /*            &             &*/
 			>;
 		};
 
