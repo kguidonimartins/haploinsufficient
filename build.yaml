@@ -17,3 +17,5 @@ include:
     shield: haplo-ins_left
   - board: nice_nano_v2
     shield: haplo-ins_right
+  - board: nice_nano_v2
+    shield: settings_reset
