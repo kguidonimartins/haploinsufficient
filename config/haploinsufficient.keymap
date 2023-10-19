@@ -86,19 +86,6 @@
                 , <&macro_tap &kp N0>
                 ;
         };
-        macro_print: macro_print {
-            label = "macro_print";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCMD>
-                , <&macro_press &kp LSHFT>
-                , <&macro_press &kp N2>
-                , <&macro_release &kp LCMD>
-                , <&macro_release &kp LSHFT>
-                , <&macro_release &kp N2>
-                ;
-        };
         macro_u: macro_u {
             label = "macro_u";
             compatible = "zmk,behavior-macro";
@@ -110,6 +97,71 @@
                 , <&macro_release &kp LCTRL>
                 , <&macro_release &kp LCMD>
                 , <&macro_release &kp U>
+                ;
+        };
+        macro_i: macro_i {
+            label = "macro_i";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LCMD>
+                , <&macro_press &kp I>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LCMD>
+                , <&macro_release &kp I>
+                ;
+        };
+        macro_n: macro_n {
+            label = "macro_n";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LCMD>
+                , <&macro_press &kp N>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LCMD>
+                , <&macro_release &kp N>
+                ;
+        };
+        macro_m: macro_m {
+            label = "macro_m";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LCMD>
+                , <&macro_press &kp M>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LCMD>
+                , <&macro_release &kp M>
+                ;
+        };
+        macro_comma: macro_comma {
+            label = "macro_comma";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LCMD>
+                , <&macro_press &kp COMMA>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LCMD>
+                , <&macro_release &kp COMMA>
+                ;
+        };
+        macro_print: macro_print {
+            label = "macro_print";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_press &kp LSHFT>
+                , <&macro_press &kp N2>
+                , <&macro_release &kp LCMD>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp N2>
                 ;
         };
     };
@@ -159,7 +211,7 @@
 
 		nav_layer {
 			bindings = <
-                   &none        &none         &none         &none              &none             &caps_word          &kp GRAVE        &kp CARET                &kp TILDE     &kp DQT
+                   &none        &none         &none         &none              &none             &caps_word          &kp GRAVE           &kp CARET                &kp TILDE     &kp DQT
                    &none        &none         &none         &none              &none             &kp LEFT            &kp DOWN         &kp UP                   &kp RIGHT     &kp DQT
                    &none        &none         &none         &none              &none             &tmux_list          &none            &none                    &none         &kp SQT
 				 /*&            &*/         &none              &none             &none               &none            &kp BSPC                 &none     /*            &             &*/
@@ -168,7 +220,7 @@
 
 		outro_layer {
 			bindings = <
-                   &none        &none         &none         &none              &none             &none               &none            &none                    &none         &macro_print
+                   &none        &none         &none         &none              &none             &none               &kp C_PREV       &kp C_PP                 &kp C_NEXT    &macro_print
                    &none        &none         &none         &none              &none             &kp C_BRI_DN        &kp C_VOL_DN     &kp C_VOL_UP             &kp C_BRI_UP  &none
                    &none        &none         &none         &none              &none             &none               &kp C_MUTE       &none                    &none         &none
 				 /*&            &*/         &none              &none             &none               &none            &none                    &none     /*            &             &*/
@@ -177,9 +229,9 @@
 
 		fun_layer {
 			bindings = <
-                   &kp LG(Q)       &none         &kp LG(LC(E))    &none              &kp LG(LC(T))            &caps_word          &macro_u            &none                    &none         &none
+                   &kp LG(Q)       &none         &kp LG(LC(E))    &none              &kp LG(LC(T))            &caps_word          &none            &macro_u                    &macro_i         &macro_print
                    &kp LG(LC(A))       &none         &none       &none             &none            &kp LEFT            &kp DOWN         &kp UP                   &kp RIGHT     &kp DQT
-                   &kp LG(LC(Z))       &kp LG(LC(X))         &kp LG(LC(C))        &kp LG(LC(V))             &none            &none               &none            &none                    &none         &kp SQT
+                   &kp LG(LC(Z))       &kp LG(LC(X))         &kp LG(LC(C))        &kp LG(LC(V))             &none            &macro_n               &macro_m            &macro_comma                    &none         &kp SQT
 				 /*&            &*/         &none              &none             &kp LG(LC(RET))              &none            &none                    &none     /*            &             &*/
 			>;
 		};
