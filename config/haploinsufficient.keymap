@@ -86,6 +86,19 @@
                 , <&macro_tap &kp N0>
                 ;
         };
+        macro_print: macro_print {
+            label = "macro_print";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_press &kp LSHFT>
+                , <&macro_press &kp N2>
+                , <&macro_release &kp LCMD>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp N2>
+                ;
+        };
     };
 
     behaviors {
@@ -142,7 +155,7 @@
 
 		outro_layer {
 			bindings = <
-                   &none        &none         &none         &none              &none             &none               &none            &none                    &none         &none
+                   &none        &none         &none         &none              &none             &none               &none            &none                    &none         &macro_print
                    &none        &none         &none         &none              &none             &kp C_BRI_DN        &kp C_VOL_DN     &kp C_VOL_UP             &kp C_BRI_UP  &none
                    &none        &none         &none         &none              &none             &none               &kp C_MUTE       &none                    &none         &none
 				 /*&            &*/         &none              &none             &none               &none            &none                    &none     /*            &             &*/
