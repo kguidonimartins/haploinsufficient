@@ -229,7 +229,7 @@
 
 		fun_layer {
 			bindings = <
-                   &kp LG(Q)       &none         &kp LG(LC(E))    &none              &kp LG(LC(T))            &caps_word          &none            &macro_u                    &macro_i         &macro_print
+                   &kp LG(Q)       &none         &kp LG(LC(E))    &none              &kp LG(LC(T))            &caps_word       &macro_u                &macro_i    &none         &macro_print
                    &kp LG(LC(A))       &none         &none       &none             &none            &kp LEFT            &kp DOWN         &kp UP                   &kp RIGHT     &kp DQT
                    &kp LG(LC(Z))       &kp LG(LC(X))         &kp LG(LC(C))        &kp LG(LC(V))             &none            &macro_n               &macro_m            &macro_comma                    &none         &kp SQT
 				 /*&            &*/         &none              &none             &kp LG(LC(RET))              &none            &none                    &none     /*            &             &*/
