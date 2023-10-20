@@ -101,7 +101,7 @@
         COMBO(minus, &kp MINUS, 31 34, 60)
         COMBO(underscore, &kp UNDER, 32 33, 60)
         COMBO(capslock, &kp CAPS, 30 35, 60)
-        COMBO(capslock, &caps_word, 20 29, 60)
+        COMBO(capsword, &caps_word, 20 29, 60)
         // COMBO(reset_left, &bootloader, 0 1 2 3, 100)
         //COMBO(reset_right, &bootloader, 6 7 8 9, 100)
     };
