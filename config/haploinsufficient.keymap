@@ -97,11 +97,11 @@
 
         //COMBO(semicolon, &kp SEMI, 18 19, 60
         //COMBO(slash, &kp FSLH, 1 2, 60)
-        COMBO(escape, &kp ESC, 0 1, 60)
+        //COMBO(escape, &kp ESC, 0 1, 60)
         COMBO(minus, &kp MINUS, 31 34, 60)
         COMBO(underscore, &kp UNDER, 32 33, 60)
-        COMBO(capslock, &kp CAPS, 30 35, 60)
-        COMBO(capsword, &caps_word, 20 29, 60)
+        COMBO(equal, &kp EQUAL, 30 35, 60)
+        COMBO(plus, &kp PLUS, 20 29, 60)
         // COMBO(reset_left, &bootloader, 0 1 2 3, 100)
         //COMBO(reset_right, &bootloader, 6 7 8 9, 100)
     };
@@ -256,7 +256,7 @@
 
 		nav_layer {
 			bindings = <
-                   &none        &none         &none         &none              &none             &caps_word          &kp GRAVE           &kp CARET                &kp TILDE     &kp DQT
+                   &none        &none         &none         &none              &none             &caps_word          &kp GRAVE           &kp TILDE               &kp CARET     &kp DQT
                    &none        &none         &none         &none              &none             &kp LEFT            &kp DOWN         &kp UP                   &kp RIGHT     &kp DQT
                    &none        &none         &none         &none              &none             &tmux_list          &none            &none                    &none         &kp SQT
 				 /*&            &*/         &none              &none             &none               &none            &kp BSPC                 &none     /*            &             &*/
