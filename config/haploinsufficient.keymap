@@ -230,8 +230,8 @@
 		qwert_layer {
 			bindings = <
                    &kp     Q    &kp W         &kp E         &kp R              &kp T              &kp Y               &kp U            &kp I                 &kp O         &kp P
-                   &bhm LGUI A &bhm LALT  S   &bhm LSHFT D  &bhm LCTRL F       &kp G              &kp H               &bhm RCTRL J      &bhm RSHFT K           &bhm RALT L    &kp SEMI
-                   &kp Z  &lt OUT_L X  &kp C         &kp V              &kp B              &kp N               &kp M            &kp COMMA             &kp DOT       &bhm RGUI SLASH
+                   &bhm LGUI A &bhm LALT  S   &bhm LSHFT D  &bhm LCTRL F       &kp G              &kp H               &bhm RCTRL J      &bhm RSHFT K           &bhm RALT L    &bhm RGUI COLON
+                   &kp Z  &lt OUT_L X  &kp C         &kp V              &kp B              &kp N               &kp M            &kp COMMA             &kp DOT       &kp SLASH
 				 /*&            &*/              &bhm LSHFT ESC   &bhm LCMD TAB  &lt NAV_L RET     &lt SYM_L SPACE  &lt NUM_L BSPC       &lt FUN_L DEL     /*  &             &*/
 			>;
 		};
@@ -256,7 +256,7 @@
 
 		nav_layer {
 			bindings = <
-                   &none        &none         &none         &none              &none             &caps_word          &kp GRAVE           &kp TILDE               &kp CARET     &kp DQT
+                   &none        &none         &none         &none              &none             &caps_word          &kp GRAVE           &kp TILDE               &kp CARET     &kp SEMI
                    &none        &none         &none         &none              &none             &kp LEFT            &kp DOWN         &kp UP                   &kp RIGHT     &kp DQT
                    &none        &none         &none         &none              &none             &tmux_list          &none            &none                    &none         &kp SQT
 				 /*&            &*/         &none              &none             &none               &none            &kp BSPC                 &none     /*            &             &*/
