@@ -209,6 +209,43 @@
                 , <&macro_release &kp N2>
                 ;
         };
+
+        macro_zoomin: macro_zoomin {
+            label = "macro_zoomin";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_press &kp PLUS>
+                , <&macro_release &kp LCMD>
+                , <&macro_release &kp PLUS>
+                ;
+        };
+
+        macro_zoomout: macro_zoomout {
+            label = "macro_zoomout";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_press &kp MINUS>
+                , <&macro_release &kp LCMD>
+                , <&macro_release &kp MINUS>
+                ;
+        };
+
+        macro_zoomreset: macro_zoomreset {
+            label = "macro_zoomreset";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_press &kp N0>
+                , <&macro_release &kp LCMD>
+                , <&macro_release &kp N0>
+                ;
+        };
+
     };
 
     behaviors {
@@ -267,7 +304,7 @@
 			bindings = <
                    &none        &none         &none         &none              &none             CCY                 &kp C_PREV       &kp C_PP                 &kp C_NEXT    &macro_print
                    &none        &none         &none         &none              &none             &kp C_BRI_DN        &kp C_VOL_DN     &kp C_VOL_UP             &kp C_BRI_UP  &none
-                   &none        &none         &none         &none              &none             &none               &kp C_MUTE       &none                    &none         &none
+                   &none        &none         &none         &none              &none             &none               &kp C_MUTE       &macro_zoomin            &macro_zoomout &macro_zoomreset
 				 /*&            &*/         &none              &none             &none               &none            &none                    &none     /*            &             &*/
 			>;
 		};
