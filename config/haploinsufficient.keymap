@@ -73,8 +73,9 @@
 #define CC_L &kp LG(LC(SEMI))
 #define CC_S &kp LG(LC(SLASH))
 
-#define TAB_RT LC(TAB)
-#define TAB_LT LC(LS(TAB))
+#define TAB_FW &kp LG(TAB)
+#define TAB_BW &kp LG(LS(TAB))
+#define TAB_CY &kp LG(TILDE)
 
 / {
     combos {
@@ -296,9 +297,9 @@
 
 		nav_layer {
 			bindings = <
-                   TAB_RT        &none         &none         &none              &none             &caps_word          &kp GRAVE           &kp TILDE               &kp CARET     &kp SEMI
-                   TAB_LT        &none         &none         &none              &none             &kp LEFT            &kp DOWN         &kp UP                   &kp RIGHT     &kp DQT
-                   &none        &none         &none         &none              &none             &tmux_list          &none            &none                    &none         &kp SQT
+                   TAB_CY        &none         &none         &none              &none             &caps_word          &kp GRAVE           &kp TILDE               &kp CARET     &kp SEMI
+                   TAB_FW        &none         &none         &none              &none             &kp LEFT            &kp DOWN         &kp UP                   &kp RIGHT     &kp DQT
+                   TAB_BW        &none         &none         &none              &none             &tmux_list          &none            &none                    &none         &kp SQT
 				 /*&            &*/         &none              &none             &none               &none            &kp BSPC                 &none     /*            &             &*/
 			>;
 		};
