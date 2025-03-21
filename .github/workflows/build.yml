@@ -86,6 +86,21 @@ jobs:
       - name: Archive (${{ steps.variables.outputs.display-name }})
         uses: actions/upload-artifact@v4
         with:
-          name: firmware
+          name: firmware-${{ steps.variables.outputs.artifact-name }}
           path: build/artifacts
-          overwrite: true
+
+  consolidate:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: all-artifacts
+          pattern: firmware-*
+          merge-multiple: true
+      - name: Upload consolidated artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware
+          path: all-artifacts
